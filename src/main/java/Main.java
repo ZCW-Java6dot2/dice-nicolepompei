@@ -7,7 +7,7 @@ public class Main {
 
         simulation.runSimulation();
 
-        simulation.printResults();
+       // simulation.printResults();
 
         simulation.saveToFile();
 
