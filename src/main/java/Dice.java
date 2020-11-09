@@ -1,24 +1,38 @@
 import java.util.Random;
 
 public class Dice {
-    private Integer numOfDice;
+    private int numOfDice;
 
-    public Dice(Integer numOfDice){
+    public Dice(int numOfDice){
         this.numOfDice = numOfDice;
     }
 
-    public Integer getNumOfDice() {
+    public int getNumOfDice() {
         return numOfDice;
     }
 
-    public Integer tossAndSum(){
+    public int tossAndSum(){
 
-        Integer sumOfTosses = 0;
+        int sumOfTosses = 0;
 
         for(int i = 0; i < numOfDice; i++){
 
             Random toss = new Random();
-            Integer resultsOfToss = toss.nextInt(6) + 1;
+            int resultsOfToss = toss.nextInt(6) + 1;
+            sumOfTosses += resultsOfToss;
+        }
+        return sumOfTosses;
+
+    }
+
+    public int tossAndSum(int seed){
+
+        int sumOfTosses = 0;
+
+        for(int i = 0; i < numOfDice; i++){
+
+            Random toss = new Random(seed);
+            int resultsOfToss = toss.nextInt(6) + 1;
             sumOfTosses += resultsOfToss;
         }
         return sumOfTosses;

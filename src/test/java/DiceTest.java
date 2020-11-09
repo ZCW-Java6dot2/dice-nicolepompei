@@ -24,15 +24,8 @@ public class DiceTest {
     public void tossAndSumTest() {
 
         Dice diceInstance = new Dice(1);
-        Integer toss = diceInstance.tossAndSum();
-        boolean actual;
-        boolean expected = true;
-
-        if (toss > 7 || toss < 1) {
-            actual = false;
-        } else {
-            actual = true;
-        }
+        Integer actual = diceInstance.tossAndSum(5);
+        Integer expected = 6;
 
         Assert.assertEquals(expected, actual);
     }
